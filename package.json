@@ -1,6 +1,6 @@
 {
-  "name": "ous",
-  "version": "0.1.0",
+  "name": "one-global-state",
+  "version": "1.0.0",
   "description": "Lightweight React global state hook — useGlobalState()",
   "type": "module",
   "main": "./dist/ous.umd.js",
