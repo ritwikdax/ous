@@ -20,13 +20,15 @@
 .card {
   background: var(--bg);
   border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
   border-radius: 12px;
   padding: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   box-shadow: var(--shadow);
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    font-weight: 600;
     color: var(--text-h);
     margin: 0 0 4px;
   }
@@ -39,7 +41,13 @@
   .hint {
     font-size: 0.82rem;
     color: var(--text);
-    margin: 0 0 16px;
+    margin: 0 0 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .content {
+    padding-top: 16px;
   }
 }
 

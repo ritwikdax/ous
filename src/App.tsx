@@ -161,7 +161,7 @@ function App() {
   return (
     <main className="demo">
       <h1>
-        ous — <code>useGlobalState</code> demo
+        one-global-state — <code>useGlobalState</code> demo
       </h1>
       <p className="subtitle">
         All components below share state via global keys — no context or prop
@@ -176,9 +176,11 @@ function App() {
           Two components share <code>'counter'</code>. The ×2 button calls{" "}
           <code>setGlobalState()</code> directly from outside React.
         </p>
-        <div className="row">
-          <CounterDisplay />
-          <CounterControls />
+        <div className="content">
+          <div className="row">
+            <CounterDisplay />
+            <CounterControls />
+          </div>
         </div>
       </section>
 
@@ -189,8 +191,10 @@ function App() {
         <p className="hint">
           Editor and display are sibling components with no shared parent state.
         </p>
-        <UsernameEditor />
-        <UsernameDisplay />
+        <div className="content">
+          <UsernameEditor />
+          <UsernameDisplay />
+        </div>
       </section>
 
       <section className="card">
@@ -201,8 +205,10 @@ function App() {
           Toggle and consumer share <code>'theme'</code> — independent
           components, no prop passing.
         </p>
-        <ThemeToggle />
-        <ThemeConsumer />
+        <div className="content">
+          <ThemeToggle />
+          <ThemeConsumer />
+        </div>
       </section>
 
       <section className="card">
@@ -213,8 +219,10 @@ function App() {
           Input and list share <code>'todos'</code> via functional updaters that
           operate on the previous array.
         </p>
-        <TodoInput />
-        <TodoList />
+        <div className="content">
+          <TodoInput />
+          <TodoList />
+        </div>
       </section>
     </main>
   );

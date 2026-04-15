@@ -8,8 +8,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "ous",
-      fileName: (format) => `ous.${format}.js`,
+      name: "ogs",
+      fileName: (format) => `ogs.${format}.js`,
     },
     rollupOptions: {
       // React must not be bundled — consumers provide it
