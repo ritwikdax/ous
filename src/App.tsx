@@ -127,7 +127,6 @@ function TodoInput() {
 }
 
 function TodoList() {
-  console.log("TodoList render");
   const [todos, setTodos] = useGlobalState<Todo[]>(KEYS.todos, []);
 
   const toggle = (id: number) =>

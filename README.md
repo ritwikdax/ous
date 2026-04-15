@@ -147,6 +147,26 @@ function logout() {
 }
 ```
 
+### Production Use Case
+
+to avoid dealing with all unique keys management, it will be better to wrap each global state inside a custom hook.
+
+For example, if we want to store a global filter for a table which is displaying the data as per the filter set, we can use something like below
+
+```ts
+//GLOBAL CONSTS
+const FILTER_KEY = "filter-key";
+
+function useGlobalFilter() {
+  return useGlobalState<FilterSettings>(FILTER_KEY, {
+    order: "desc",
+    sort: "name",
+  });
+}
+```
+
+Then use the `useGlobalFilter` where ever required inside the project.
+
 ## How it works
 
 - A module-level `Map` stores values keyed by string — shared across the entire app.
